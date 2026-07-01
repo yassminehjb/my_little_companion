@@ -98,3 +98,67 @@ body {
 
 /* Main Display Module Box */
 .card {
+.card {
+    background-color: #F2EDE4;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #7A6F62;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Focus Session Timer Specifics */
+.timer-display {
+    font-size: 65px;
+    font-weight: bold;
+    color: #89A894; /* Soft Sage Green */
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Interactive Tiny Utility Buttons */
+.action-btn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    min-width: 85px;
+    transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.action-btn:active {
+    transform: scale(0.96);
+}
+
+.btn-start {
+    background-color: #89A894; /* Sage Green */
+}
+.btn-start:hover { filter: brightness(0.9); }
+
+.btn-pause {
+    background-color: #D1BFA7; /* Cozy Soft Taupe */
+}
+.btn-pause:hover { filter: brightness(0.9); }
+
+.btn-reset {
+    background-color: #E0B0B0; /* Dusty Rose / Soft Pink */
+}
+.btn-reset:hover { filter: brightness(0.9); }
