@@ -295,3 +295,134 @@ b6 = ctk.CTkButton(sidebar, text="🌱 Status", font=normal_font, fg_color="tran
 b6.pack(fill="x", padx=10, pady=2)
 b7 = ctk.CTkButton(sidebar, text="🎮 Play", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_game)
 b7.pack(fill="x", padx=10, pady=2)
+b3 = ctk.CTkButton(sidebar, text="📖 Diary", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_diary)
+b3.pack(fill="x", padx=10, pady=2)
+b4 = ctk.CTkButton(sidebar, text="🧮 Calc", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_calc)
+b4.pack(fill="x", padx=10, pady=2)
+b5 = ctk.CTkButton(sidebar, text="🎵 Lo-Fi", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_music)
+b5.pack(fill="x", padx=10, pady=2)
+b6 = ctk.CTkButton(sidebar, text="🌱 Status", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_plant)
+b6.pack(fill="x", padx=10, pady=2)
+b7 = ctk.CTkButton(sidebar, text="🎮 Play", font=normal_font, fg_color="transparent", text_color="#5D544B", hover_color="#DFD8CD", anchor="w", height=38, command=go_to_game)
+b7.pack(fill="x", padx=10, pady=2)
+el(pomo_box, text="25:00", font=("Segoe UI", 55, "bold"), text_color="#89A894")
+timer_text.pack(pady=10)
+pomo_btns = ctk.CTkFrame(pomo_box, fg_color="transparent")
+pomo_btns.pack(pady=20)
+ctk.CTkButton(pomo_btns, text="Start ✨", fg_color="#89A894", width=80, command=click_start).pack(side="left", padx=5)
+ctk.CTkButton(pomo_btns, text="Pause ☁️", fg_color="#D1BFA7", width=80, command=click_pause).pack(side="left", padx=5)
+ctk.CTkButton(pomo_btns, text="Reset 🔄", fg_color="#E0B0B0", width=80, command=click_reset).pack(side="left", padx=5)
+
+# =====================================================================
+# SCREEN 2: TO-DO LISTTTT
+# =====================================================================
+todo_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(todo_box, text="🎀 My Little Goals 🎀", font=title_font, text_color="#7A6F62").pack(pady=15)
+todo_input = ctk.CTkEntry(todo_box, placeholder_text="Type a cute mission...", width=250, fg_color="#FFFFFF")
+todo_input.pack(pady=5)
+ctk.CTkButton(todo_box, text="Add Mission 🍰", fg_color="#A799B7", command=press_add_todo).pack(pady=5)
+todo_output = ctk.CTkTextbox(todo_box, width=320, height=180, fg_color="#FFFFFF")
+todo_output.pack(pady=10)
+
+# =====================================================================
+# SCREEN 3: DIARY SECRETS HIHI
+# =====================================================================
+diary_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(diary_box, text="🔒 Soft Thoughts Diary 🔒", font=title_font, text_color="#7A6F62").pack(pady=10)
+history_bar = ctk.CTkFrame(diary_box, fg_color="transparent")
+history_bar.pack(fill="x", padx=30, pady=2)
+ctk.CTkLabel(history_bar, text="Read Past Pages:", font=normal_font).pack(side="left", padx=5)
+diary_dropdown = ctk.CTkComboBox(history_bar, values=["No entries yet"], command=load_old_page, width=160)
+diary_dropdown.pack(side="left", padx=5)
+diary_title_input = ctk.CTkEntry(diary_box, placeholder_text="Entry Title (e.g., July 1st) ☕", width=340, fg_color="#FFFFFF")
+diary_title_input.pack(pady=5)
+diary_text_input = ctk.CTkTextbox(diary_box, width=340, height=150, fg_color="#FFFFFF")
+diary_text_input.pack(pady=5)
+ctk.CTkButton(diary_box, text="Save Page Permanently 🌸", fg_color="#E0B0B0", command=press_save_diary).pack(pady=5)
+reload_diary_list()
+
+# =====================================================================
+# SCREEN 4: CALCULATORRRRRRR
+# =====================================================================
+calc_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(calc_box, text="🧮 Tiny Math Box 🧮", font=title_font, text_color="#7A6F62").pack(pady=10)
+calc_screen = ctk.CTkEntry(calc_box, width=240, font=("Segoe UI", 18), justify="right", fg_color="#FFFFFF")
+calc_screen.pack(pady=10)
+calc_grid = ctk.CTkFrame(calc_box, fg_color="transparent")
+calc_grid.pack()
+
+# row 1
+ctk.CTkButton(calc_grid, text="7", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("7")).grid(row=0, column=0, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="8", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("8")).grid(row=0, column=1, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="9", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("9")).grid(row=0, column=2, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="/", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("/")).grid(row=0, column=3, padx=4, pady=4)
+# row 2
+ctk.CTkButton(calc_grid, text="4", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("4")).grid(row=1, column=0, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="5", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("5")).grid(row=1, column=1, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="6", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("6")).grid(row=1, column=2, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="*", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("*")).grid(row=1, column=3, padx=4, pady=4)
+# row 3
+ctk.CTkButton(calc_grid, text="1", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("1")).grid(row=2, column=0, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="2", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("2")).grid(row=2, column=1, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="3", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("3")).grid(row=2, column=2, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="-", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("-")).grid(row=2, column=3, padx=4, pady=4)
+# row 4
+ctk.CTkButton(calc_grid, text="C", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("C")).grid(row=3, column=0, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="0", width=50, height=38, fg_color="#E8E3D9", text_color="#5D544B", command=lambda:calc_click("0")).grid(row=3, column=1, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="=", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("=")).grid(row=3, column=2, padx=4, pady=4)
+ctk.CTkButton(calc_grid, text="+", width=50, height=38, fg_color="#D1BFA7", text_color="#5D544B", command=lambda:calc_click("+")).grid(row=3, column=3, padx=4, pady=4)
+
+# =====================================================================
+# SCREEN 5: MUSICOOOOOOO
+# =====================================================================
+music_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(music_box, text="🎵 Ambient Cozy Beats 🎵", font=title_font, text_color="#7A6F62").pack(pady=20)
+music_play_btn = ctk.CTkButton(music_box, text="▶️ Play Ambient Beats", fg_color="#A799B7", command=click_music_play)
+music_play_btn.pack(pady=10)
+music_bar = ctk.CTkProgressBar(music_box, width=250, progress_color="#89A894", fg_color="#FFFFFF")
+music_bar.pack(pady=10)
+music_bar.set(0)
+ctk.CTkLabel(music_box, text="🎚️ Volume Control:", font=normal_font).pack(pady=5)
+music_slider = ctk.CTkSlider(music_box, from_=0, to=100, progress_color="#D1BFA7")
+music_slider.pack()
+music_slider.set(70)
+
+# =====================================================================
+# SCREEN 6: PLANT THAT GROWS AS YOOO STUDYYY
+# =====================================================================
+plant_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(plant_box, text="🌱 Study Sprout Status 🌱", font=title_font, text_color="#7A6F62").pack(pady=15)
+plant_emoji = ctk.CTkLabel(plant_box, text="🌱", font=("Segoe UI", 70))
+plant_emoji.pack(pady=10)
+plant_status_text = ctk.CTkLabel(plant_box, text="Level 1 Matcha Tree\nXP Progress to next evolution: 0/100", font=normal_font)
+plant_status_text.pack(pady=5)
+plant_bar = ctk.CTkProgressBar(plant_box, width=220, progress_color="#89A894")
+plant_bar.pack(pady=10)
+plant_bar.set(0)
+ctk.CTkButton(plant_box, text="Give Water 💧 (+25 XP)", fg_color="#89A894", command=click_water_plant).pack(pady=10)
+
+# =====================================================================
+# SCREEN 7: MINIII GAMEEEEEE
+# =====================================================================
+game_box = ctk.CTkFrame(main_area, fg_color="#F2EDE4", corner_radius=15)
+ctk.CTkLabel(game_box, text="🧁 Cupcake Basket Break 🧁", font=title_font, text_color="#7A6F62").pack(pady=5)
+game_score_lbl = ctk.CTkLabel(game_box, text="Press Start to Play!", font=normal_font)
+game_score_lbl.pack()
+
+game_board = ctk.CTkFrame(game_box, width=340, height=240, fg_color="#FFFFFF", border_width=2, border_color="#D1BFA7")
+game_board.pack(pady=10)
+
+game_cupcake = ctk.CTkLabel(game_board, text="🧁", font=("Arial", 22))
+game_basket = ctk.CTkLabel(game_board, text="🧺", font=("Arial", 26))
+game_basket.place(x=basket_position, y=200)
+
+game_buttons = ctk.CTkFrame(game_box, fg_color="transparent")
+game_buttons.pack()
+ctk.CTkButton(game_buttons, text="◀️ Left", width=70, fg_color="#D1BFA7", command=go_left).pack(side="left", padx=5)
+ctk.CTkButton(game_buttons, text="🎮 Start", width=80, fg_color="#89A894", command=press_start_game).pack(side="left", padx=5)
+ctk.CTkButton(game_buttons, text="Right ▶️", width=70, fg_color="#D1BFA7", command=go_right).pack(side="left", padx=5)
+
+# run the first screen at boot
+go_to_pomo()
+
+window.mainloop()

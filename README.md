@@ -28,23 +28,5 @@ basic dropdown module parses the file so you can pull up past entries
 anytime.
 Math Box: A traditional keypad configuration utilizing raw processing
 evaluation to calculate string equations instantly.
-Ambient Player: Displays standard playback progression tracking linked to a
-native interactive sliding scale.
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-Matcha Plant & Mini-Game: Track your leveling metrics or switch over to a
+Ambient Player: Displays standard playback progression tracking linked to 
 quick mechanical catching sequence for short micro-breaks.
