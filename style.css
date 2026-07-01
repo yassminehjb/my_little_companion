@@ -1,0 +1,49 @@
+/* =====================================================================
+    myyy globall theeemeee and styleeess of this cute app 
+   ===================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F9F6F0; /* Soft warm cream background */
+    color: #5D544B;            /* Muted cozy brown text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =====================================================================
+   Myy App's Interface Window(it meansss the main container)
+   ===================================================================== */
+.app-container {
+    background-color: #FFFFFF;
+    width: 750px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(109, 93, 81, 0.1); /* Super soft shadow */
+}
+
+/* =====================================================================
+   the left sidee navigation barr where there is my buttons
+   ===================================================================== */
+.nav-bar {
+    background-color: #E8E3D9; /* Darker warm cream */
+    width: 180px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
